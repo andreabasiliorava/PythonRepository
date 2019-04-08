@@ -1,3 +1,4 @@
+#%%
 def is_prime (x):
     if x==0 :
         return True
@@ -20,5 +21,5 @@ def find_primes (x):
         i += 1
     return primes
 
-print(find_primes (30))
-    
+print(find_primes (40))
+ #%%   
