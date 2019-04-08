@@ -6,5 +6,5 @@ ID = dict (001 = dict ('nome' = 'Andrea', 'città' = 'Faenza ),
 ID = {'001' : {'name' : 'Andrea', 'town' : 'Faenza'},
       '002' : {'name' : 'Tommaso', 'town' : 'Fidenza'}
      }
-ID.values()
+ID.keyes()
 #%%
