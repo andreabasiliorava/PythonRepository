@@ -20,5 +20,5 @@ def find_primes (x):
         i += 1
     return primes
 
-print(find_primes (20))
+print(find_primes (30))
     
