@@ -1,3 +1,4 @@
+#%%
 #definition of Maps for Cellular Automata 110
 CA110 = { "..." : "0", 
           "..0" : ".",
@@ -18,7 +19,7 @@ c= a+b
 print(c)
 """
 
-my_state = [".",".",".",".",".",".",".",".",".","."]
+my_state = ["0",".",".","0","0","0",".",".","0","."]
 """
 my_state[1]= CA110[my_state[0]+my_state[1]+my_state[2]]
 print(my_state)
@@ -41,7 +42,7 @@ CA110[my_state[i-1]+my_state[i]+my_state[i+1]]
 """        
 #print(len(my_state))
 
-def evolution (state) :
+def evolve (state) :
     dummy_state = state
     i = 1
     while i < (len(state)-1):
@@ -50,7 +51,16 @@ def evolution (state) :
     boundary_evolution(dummy_state)
     state = dummy_state
 
-
+def evolution_printer(state,n):
+    i=1
+    while i <= n:
+        print(state)
+        evolve(state)
+        i+=1
+        
+evolution_printer(my_state,100)
+#%%
+        
    
     
     
