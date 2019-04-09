@@ -1,3 +1,4 @@
+#definition of Maps for Cellular Automata 110
 CA110 = { "..." : "0", 
           "..0" : ".",
           ".0." : ".",
@@ -7,11 +8,21 @@ CA110 = { "..." : "0",
           "00." : ".",
           "000" : "0"
         }
-CA110.keys()
-CA110.values()
+#CA110.keys()
+#CA110.values()
+#CA110["..."]
+"""
+a = "fr"
+b= " tr yt"
+c= a+b
+print(c)
+"""
 
 my_state = [".",".",".",".",".",".",".",".",".","."]
-
+"""
+my_state[1]= CA110[my_state[0]+my_state[1]+my_state[2]]
+print(my_state)
+"""
 def boundary_evolution (state) :
     if state[0] == "0" :
         state[0] = "."
@@ -23,7 +34,51 @@ def boundary_evolution (state) :
         state[-1] = "0"  
     return state
         
-print(boundary_evolution(my_state))        
+#print(boundary_evolution(my_state))   
+"""
+i=1    
+CA110[my_state[i-1]+my_state[i]+my_state[i+1]]   
+"""        
+#print(len(my_state))
+
+def evolution (state) :
+    dummy_state = state
+    i = 1
+    while i < (len(state)-1):
+        dummy_state[i]=CA110[state[i-1]+state[i]+state[i+1]]
+        i+=1
+    boundary_evolution(dummy_state)
+    state = dummy_state
+
+
+   
+    
+    
         
-#def evolution (state) :
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
